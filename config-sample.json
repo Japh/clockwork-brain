@@ -1,0 +1,10 @@
+{
+  "particle": {
+    "auth_token": "",
+    "device_id": ""
+  },
+  "bom": {
+    "site_number": "",
+    "state_code": ""
+  }
+}

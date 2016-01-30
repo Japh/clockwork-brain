@@ -1,0 +1,16 @@
+{
+  "name": "clockwork-brain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Japh",
+  "license": "MIT",
+  "dependencies": {
+    "bom-api": "^1.0.4",
+    "q": "^1.4.1",
+    "spark": "^1.1.0"
+  }
+}
