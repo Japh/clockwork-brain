@@ -55,7 +55,6 @@ var proceed = setProcess(state)
       if (error) {
         deferred.reject(error);
       } else {
-        console.log(data);
         deferred.resolve(state);
       }
     });
