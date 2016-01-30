@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "bom-api": "^1.0.4",
+    "cron": "^1.1.0",
     "q": "^1.4.1",
     "spark": "^1.1.0"
   }

@@ -5,6 +5,8 @@ var Q = require('q')
 exports.getFromBom = function(state) {
   var deferred = Q.defer();
 
+  console.log('Get BOM weather...');
+
   bom.getBomDataBySiteNumberState(config.bom.site_number, config.bom.state_code, function(error, data) {
     if (error) {
       deferred.reject(error);
@@ -18,6 +20,8 @@ exports.getFromBom = function(state) {
       deferred.resolve(state);
     }
   });
+
+  console.log('Get BOM weather complete.');
 
   return deferred.promise;
 }
