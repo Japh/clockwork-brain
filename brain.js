@@ -11,7 +11,8 @@ var schedule = new CronJob({
   cronTime: '* * * * *',
   onTick: function() {
     cronRunCount++;
-    console.log('Cron run #' + cronRunCount);
+    var d = new Date();
+    console.log('Cron run #' + cronRunCount + ' at ' + d.toString());
     var proceed = setProcess(baseState)
       .then(particle.getDevice)
       .then(weather.getFromBom)
