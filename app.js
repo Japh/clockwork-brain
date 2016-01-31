@@ -1,5 +1,4 @@
 var Q = require('q')
-  , Spark = require('spark')
   , brain = require('./brain')
   , particle = require('./particle')
   , config = require('./config');
