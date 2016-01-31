@@ -65,3 +65,21 @@ exports.setFunction = function(state) {
 
   return deferred.promise;
 };
+
+exports.setMessage = function(state) {
+  var deferred = Q.defer();
+
+  console.log('Set Particle message...');
+
+  state.device.callFunction('currentMsg', state.message, function(error, data) {
+    if (error) {
+      deferred.reject(error);
+    } else {
+      deferred.resolve(state);
+    }
+  });
+
+  console.log('Set Particle message complete.');
+
+  return deferred.promise;
+}
