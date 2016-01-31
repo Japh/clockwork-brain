@@ -20,12 +20,10 @@ var schedule = new CronJob({
       .then(function(baseState) {
         console.log('Brain process complete.');
         console.log( baseState.temperature );
-        //deferred.resolve(baseState);
       })
       .catch(function(err) {
         console.log('Brain process error:');
     		console.log(err);
-        //deferred.reject(err);
     	});
   },
   start: false,
