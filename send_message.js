@@ -10,11 +10,15 @@ var proceed = setProcess(state)
   .then(function(state) {
     var deferred = Q.defer();
 
-    state.message = process.argv[2];
+    if (process.argv[2]) {
+      state.message = process.argv[2];
 
-    console.log('Setting message to: ' + state.message);
+      console.log('Setting message to: ' + state.message);
 
-    deferred.resolve(state);
+      deferred.resolve(state);
+    } else {
+      deferred.reject('No message specified.');
+    }
 
     return deferred.promise;
   })
